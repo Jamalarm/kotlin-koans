@@ -2,6 +2,7 @@ package i_introduction._12_Extensions_On_Collections
 
 import util.TODO
 import util.doc12
+import java.util.*
 
 fun todoTask12(): Nothing = TODO(
     """
@@ -16,8 +17,9 @@ fun todoTask12(): Nothing = TODO(
     documentation = doc12()
 )
 
+fun List<Int>.sortedDescending() = this.sortedWith(Collections.reverseOrder())
+
 fun task12(): List<Int> {
-    todoTask12()
-    return arrayListOf(1, 5, 2)
+    return arrayListOf(1, 5, 2).sortedDescending()
 }
 
