@@ -2,9 +2,11 @@ package iii_conventions
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Ignore
 import org.junit.Test
 import java.util.*
 
+@Ignore
 class N28ForLoopKtTest {
     /* Month numbering starts with 0 (0-Jan, 1-Feb, ... 11-Dec) */
 

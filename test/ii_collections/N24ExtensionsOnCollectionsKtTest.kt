@@ -1,8 +1,10 @@
 package ii_collections
 
 import org.junit.Assert.assertEquals
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class N24ExtensionsOnCollectionsKtTest {
     @Test fun testCollectionOfOneElement() {
         doTest(listOf("a"), listOf("a"))

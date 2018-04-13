@@ -22,7 +22,21 @@ enum class TimeInterval {
 }
 
 class DateRange(val start: MyDate, val endInclusive: MyDate) {
+
     operator fun contains(candidate: MyDate): Boolean {
         return start <= candidate && candidate <= endInclusive
+    }
+
+    operator fun iterator(): Iterator<MyDate> = object: Iterator<MyDate> {
+
+        private var cursor: MyDate = start
+
+        override fun hasNext(): Boolean = cursor?.nextDay() <= endInclusive
+
+        override fun next(): MyDate {
+            cursor = cursor.nextDay()
+            return cursor
+        }
+
     }
 }
